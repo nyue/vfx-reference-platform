@@ -1,5 +1,9 @@
+CMAKE_MINIMUM_REQUIRED ( VERSION 2.8 )
+
 PROJECT ( VFXReferencePlatform )
 
+# Load various utilities
+INCLUDE ( cmake/Utils.cmake )
 
 # ADD_SUBDIRECTORY ( CY2014 )
 # ADD_SUBDIRECTORY ( CY2015 )
