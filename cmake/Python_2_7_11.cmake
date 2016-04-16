@@ -1,6 +1,8 @@
+# yue.nicholas@gmail.com
+
 SET ( VFXRP_EP_PYTHON_VERSION_MAJOR_STRING "2" )
 SET ( VFXRP_EP_PYTHON_VERSION_MINOR_STRING "7" )
 SET ( VFXRP_EP_PYTHON_VERSION_PATCH_STRING "11" )
 SET ( VFXRP_EP_PYTHON_ARCHIVE_EXTENSION "tgz" )
 
-INCLUDE ( "Python_2_template.cmake" )
+INCLUDE ( "${PROJECT_SOURCE_DIR}/cmake/Python_2_template.cmake" )
