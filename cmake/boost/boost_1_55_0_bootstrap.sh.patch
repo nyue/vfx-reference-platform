@@ -1,0 +1,20 @@
+--- ../boost_1_55_0_original/bootstrap.sh	2013-09-21 13:17:00.000000000 -0700
++++ bootstrap.sh	2015-06-25 17:45:38.791183638 -0700
+@@ -181,7 +181,7 @@
+ test -n "$want_help" && exit 0
+ 
+ # TBD: Determine where the script is located
+-my_dir="."
++my_dir="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+ 
+ # Determine the toolset, if not already decided
+ if test "x$TOOLSET" = x; then
+@@ -345,7 +345,7 @@
+   cat >> project-config.jam <<EOF
+ 
+ # Python configuration
+-using python : $PYTHON_VERSION : $PYTHON_ROOT ;
++using python : $PYTHON_VERSION : $PYTHON_ROOT : $PYTHON_ROOT/include/python$PYTHON_VERSION : $PYTHON_ROOT/lib/python$PYTHON_VERSION/config ;
+ EOF
+ fi
+ 
