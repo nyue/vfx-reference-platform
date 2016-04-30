@@ -30,3 +30,13 @@ INCLUDE ( "${CMAKE_SOURCE_DIR}/cmake/python/Python_2_template.cmake" )
 INCLUDE ( "${CMAKE_SOURCE_DIR}/cmake/boost/boost_template.cmake" )
 INCLUDE ( "${CMAKE_SOURCE_DIR}/cmake/qt/qt_4_template.cmake" )
 INCLUDE ( "${CMAKE_SOURCE_DIR}/cmake/pyside/PySide_template.cmake" )
+
+ADD_CUSTOM_TARGET ( CY2015
+  DEPENDS
+  Qt_4_8_6
+  boost_1_55_0_using_python_2_7_11
+  Shiboken_1_2_4
+  PySide_1_2_4
+  python_2_7_11
+  PySide_Tools_0_2_15
+  )
