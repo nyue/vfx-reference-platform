@@ -4,6 +4,10 @@ CMAKE_MINIMUM_REQUIRED ( VERSION 2.8 )
 
 PROJECT ( VFXReferencePlatform )
 
+# Just to be sure as it will be use by Qt for deployment if set
+# Otherwise, it will be set by Qt's internal heuristic for the correct location
+UNSET ( ENV{INSTALL_ROOT} PARENT_SCOPE )
+
 SET_DIRECTORY_PROPERTIES ( PROPERTIES
   EP_PREFIX ${CMAKE_INSTALL_PREFIX}
   )
