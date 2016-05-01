@@ -38,11 +38,16 @@ SET ( VFXRP_EP_PYILMBASE_VERSION_MAJOR 2 )
 SET ( VFXRP_EP_PYILMBASE_VERSION_MINOR 2 )
 SET ( VFXRP_EP_PYILMBASE_VERSION_PATCH 0 )
 
+SET ( VFXRP_EP_OPENSUBDIV_VERSION_MAJOR 2 )
+SET ( VFXRP_EP_OPENSUBDIV_VERSION_MINOR 5 )
+SET ( VFXRP_EP_OPENSUBDIV_VERSION_PATCH 1 )
+
 INCLUDE ( "${CMAKE_SOURCE_DIR}/cmake/python/Python_2_template.cmake" )
 INCLUDE ( "${CMAKE_SOURCE_DIR}/cmake/boost/boost_template.cmake" )
 INCLUDE ( "${CMAKE_SOURCE_DIR}/cmake/qt/qt_4_template.cmake" )
 INCLUDE ( "${CMAKE_SOURCE_DIR}/cmake/pyside/PySide_template.cmake" )
 INCLUDE ( "${CMAKE_SOURCE_DIR}/cmake/openexr/OpenEXR_template.cmake" )
+INCLUDE ( "${CMAKE_SOURCE_DIR}/cmake/opensubdiv/OpenSubdiv_template.cmake" )
 
 ADD_CUSTOM_TARGET ( CY2015
   DEPENDS
@@ -55,4 +60,5 @@ ADD_CUSTOM_TARGET ( CY2015
   ilmbase_2_2_0
   pyilmbase_2_2_0
   openexr_2_2_0
+  OpenSubdiv_2_5_1
   )
